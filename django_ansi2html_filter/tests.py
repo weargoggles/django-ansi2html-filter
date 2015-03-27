@@ -15,6 +15,12 @@ class ANSIEscapeConversionTestCase(TestCase):
         expected = "<span class=\"ansi32\">Fetching project</span>"
         self.assertEqual(html, expected)
 
+    def test_keep_quotes(self):
+        escaped = "Getting 'something'"
+        html = ansi(escaped)
+        expected = "Getting 'something'"
+        self.assertEqual(html, expected)
+
 
 class StyleGenerationTestCase(TestCase):
     def test_style_generation(self):
