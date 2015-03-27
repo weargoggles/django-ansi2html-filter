@@ -3,3 +3,10 @@ python:
 - 2.7
 - 3.4
 script: python setup.py test
+deploy:
+  provider: pypi
+  user: weargoggles
+  on:
+    tags: true
+  password:
+    secure: UYyTM1YMEwhg0l9j6q8LENSyH7w6sZd/eeDrCqMftco52LtTnvZbbMx7jmkenMcR0FPW7oJla2IgLekMFPt/iZEIE6sLbp6YcarcMPXwZkNvT6pmjuKMfr51slreruJbF1PnuimH6c1BYqWsO4yhR3J3jdjp9mc//FuIlhmLIZw=
